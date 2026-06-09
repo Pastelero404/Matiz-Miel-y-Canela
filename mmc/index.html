@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matiz Miel y Canela - Alta Repostería</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-contenedor">
+            <img src="logo.png" alt="Logo MMC" class="logo-img">
+            <h1 class="logo-texto">Matiz <span>Miel y Canela</span></h1>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nuestra Esencia</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-info">
+            <span class="tagline">Diseño exclusivo, sabor inolvidable</span>
+            <h2>Pastelería y Alta Repostería</h2>
+            <p>Fusionamos el arte de la repostería tradicional con un enfoque tecnológico e innovador. Transformamos tus ideas en sabores y diseños espectaculares.</p>
+            <a href="https://wa.me/528998782195?text=%C2%A1Hola%21+Vengo+de+tu+p%C3%A1gina+web.+Me+gustar%C3%ADa+cotizar+y+personalizar+el+pastel+de+mis+sue%C3%B1os.+%F0%9F%8E%82%E2%9C%A8" target="_blank" class="btn">¡Haz el pastel de tus sueños!</a>
+        </div>
+        <div class="hero-imagen">
+            <img src="logo.png" alt="Pastel exclusivo de fresas Matiz">
+        </div>
+    </section>
+
+    <section id="nosotros" class="valores">
+        <div class="tarjeta-valor">
+            <h3>100% Personalizado</h3>
+            <p>Tú eres el diseñador. Eliges desde el tipo de bizcocho hasta el nivel de dulzor.</p>
+        </div>
+        <div class="tarjeta-valor">
+            <h3>Ingredientes Premium</h3>
+            <p>Trabajamos exclusivamente con materia prima local, de alta calidad y sin conservadores artificiales.</p>
+        </div>
+        <div class="tarjeta-valor">
+            <h3>Compromiso Tecnológico</h3>
+            <p>Visualiza y cotiza tus diseños de forma digital e inmediata desde nuestro laboratorio creativo.</p>
+        </div>
+    </section>
+
+    <section id="productos" class="productos-seccion">
+        <h2>Nuestras Especialidades</h2>
+        
+        <div class="grid-productos">
+            <div class="tarjeta-producto" onclick="abrirProyecto('panel-pasteles')">
+                <img src="pastel.png.jpg" alt="Diseño de pasteles">
+                <h3>Diseño de Pasteles</h3>
+                <p>Modelados únicos en fondant, buttercream y diseños tridimensionales para bodas, XV años y cumpleaños.</p>
+            </div>
+
+            <div class="tarjeta-producto" onclick="abrirProyecto('panel-galletas')">
+                <img src="Galletas.png.jpg" alt="Galletas decoradas artísticamente a mano">
+                <h3>Galletas Decoradas</h3>
+                <p>Galletas de mantequilla pintadas individualmente a mano con acuarela y colorantes vegetales premium.</p>
+            </div>
+
+            <div class="tarjeta-producto" onclick="abrirProyecto('panel-gourmet')">
+                 <img src="gourmet_box.png.jpg" alt="Gourmet Box">
+                <h3>Gourmet Box</h3>
+                <p>Sets de galletas rellenas (Nutella, Lotus, Red Velvet) ideales para regalos de lujo y fechas especiales.</p>
+            </div>
+        </div>
+
+        <div id="workspace-subcategorias" class="workspace-oculto">
+            
+            <button class="btn-cerrar" onclick="cerrarProyecto()">✕ Volver a especialidades</button>
+
+            <div id="panel-pasteles" class="contenido-proyecto">
+                <div class="encabezado-proyecto">
+                    <h3>🎂 Laboratorio de Pasteles Exclusivos</h3>
+                    <p>Selecciona una categoría de diseño para tu evento:</p>
+                </div>
+                <div class="grid-subcategorias">
+                    <div class="tarjeta-sub">
+                        <img src="bodas.jpg" alt="bodas">
+                        <h4>Bodas y XV Años</h4>
+                        <p>Estructuras altas, flores de azúcar y acabados de lujo.</p>
+                    </div>
+                    <div class="tarjeta-sub">
+                        <img src="cumplea%C3%B1os.jpg" alt="cumpleaños">
+                        <h4>Cumpleaños</h4>
+                        <p>Diseños coloritivos personalizados según la temática elegida.</p>
+                    </div>
+                    <div class="tarjeta-sub">
+                        <img src="3D.jpg" alt="modelo 3D">
+                        <h4>Modelados 3D</h4>
+                        <p>Esculturas hiperrealistas totalmente comestibles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="panel-galletas" class="contenido-proyecto">
+                <div class="encabezado-proyecto">
+                    <h3>🍪 Galería de Galletas de Mantequilla Artísticas</h3>
+                    <p>Explora nuestras colecciones pintadas individualmente a mano:</p>
+                </div>
+                <div class="grid-subcategorias">
+                    <div class="tarjeta-sub">
+                                                
+                    <img src="anime.jpg" alt="anime">
+                        <h4>Estilo Anime</h4>
+                        <p>Tus personajes favoritos plasmados con acuarela comestible.</p>
+                    </div>
+                    <div class="tarjeta-sub">
+                        <img src="galleta_meme.jpg" alt="meme">
+                        <h4>Memes Populares</h4>
+                        <p>Diseños divertidos e ingeniosos para regalar una sonrisa.</p>
+                    </div>
+                    <div class="tarjeta-sub">
+                        <img src="marca.jpg" alt="marcas">
+                        <h4>Eventos & Marcas</h4>
+                        <p>Logotipos y recuerdos corporativos de alta definición.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="panel-gourmet" class="contenido-proyecto">
+                <div class="encabezado-proyecto">
+                    <h3>🎁 Colección Gourmet Boxes de Lujo</h3>
+                    <p>Sets de galletas rellenas ideales para obsequios especiales:</p>
+                </div>
+                <div class="grid-subcategorias">
+                    <div class="tarjeta-sub">
+<img src="Nutella_XL.jpg" alt="nutella">
+                        <h4>Box Nutella XL</h4>
+                        <p>Caja con relleno fluido de avellana premium.</p>
+                    </div>
+                    <div class="tarjeta-sub">
+                        <img src="Lotus.jpg" alt="lotus">
+                        <h4>Lotus Biscoff Edition</h4>
+                        <p>Sabor belga crocante con un toque de canela.</p>
+                    </div>
+                    <div class="tarjeta-sub">
+                        <img src="red_velvet.jpg" alt="red velvet">
+                        <h4>Red Velvet </h4>
+                        <p>Masa aterciopelada combinada con chips de chocolate blanco.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Contacto MMC</h4>
+                <p>📍 Calle Londres, Col. Cañada, Reynosa, Tamaulipas</p>
+                <p>📱 WhatsApp: +52 899 878 2195</p>
+                <p>📸 Instagram: @Matiz_Miel_Y_Canela</p>
+            </div>
+            <div class="footer-horario">
+                <h4>Horarios de Atención</h4>
+                <p>Lun - Sáb: 9:00 AM - 8:00 PM</p>
+                <p>Dom: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Matiz Miel y Canela. Proyecto de Innovación.</p>
+        </div>
+    </footer>
+
+    <script>
+        function abrirProyecto(idPanel) {
+            const paneles = document.querySelectorAll('.contenido-proyecto');
+            paneles.forEach(p => p.classList.remove('activo'));
+
+            const workspace = document.getElementById('workspace-subcategorias');
+            workspace.classList.add('mostrar-workspace');
+
+            const panelSeleccionado = document.getElementById(idPanel);
+            panelSeleccionado.classList.add('activo');
+
+            workspace.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function cerrarProyecto() {
+            const workspace = document.getElementById('workspace-subcategorias');
+            workspace.classList.remove('remove-workspace');
+            
+            // Alternativa directa para ocultar de golpe
+            document.getElementById('workspace-subcategorias').className = 'workspace-oculto';
+        }
+    </script>
+</body>
+</html>

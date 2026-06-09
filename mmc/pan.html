@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matiz Miel y Canela - Alta Repostería</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* CSS Integrado para que funcione el cambio dinámico y el logo */
+        .logo-contenedor {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        /* Estilos para el contenedor dinámico de categorías */
+        .categoria-contenido {
+            display: none; /* Ocultos por defecto */
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff5f5;
+            border-radius: 15px;
+            animation: fadeIn 0.5s ease;
+        }
+        .categoria-contenido.activo {
+            display: block; /* Solo se muestra el que tenga la clase activo */
+        }
+        .tarjeta-producto {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .tarjeta-producto:hover {
+            transform: scale(1.03);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-contenedor">
+            <img src="logo.png" alt="Logo MMC" class="logo-img">
+            <h1 class="logo-texto">Matiz <span>Miel y Canela</span></h1>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nuestra Esencia</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-info">
+            <span class="tagline">Diseño exclusivo, sabor inolvidable</span>
+            <h2>Pastelería y Alta Repostería</h2>
+            <p>Fusionamos el arte de la repostería tradicional con un enfoque tecnológico e innovador. Transformamos tus ideas en sabores y diseños espectaculares.</p>
+            <a href="https://wa.me/8998782195" target="_blank" class="btn">¡Haz el pastel de tus sueños!</a>
+        </div>
+        <div class="hero-imagen">
+            <img src="logo.png" alt="Pastel exclusivo de fresas Matiz">
+        </div>
+    </section>
+
+    <section id="nosotros" class="valores">
+        <div class="tarjeta-valor">
+            <h3>100% Personalizado</h3>
+            <p>Tú eres el diseñador. Eliges desde el tipo de bizcocho hasta el nivel de dulzor.</p>
+        </div>
+        <div class="tarjeta-valor">
+            <h3>Ingredientes Premium</h3>
+            <p>Trabajamos exclusivamente con materia prima local, de alta calidad y sin conservadores artificiales.</p>
+        </div>
+        <div class="tarjeta-valor">
+            <h3>Compromiso Tecnológico</h3>
+            <p>Visualiza y cotiza tus diseños de forma digital e inmediata desde nuestro laboratorio creativo.</p>
+        </div>
+    </section>
+
+    <section id="productos" class="productos-seccion">
+        <h2>Nuestras Especialidades</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">Haz clic en cualquier categoría para ver nuestro menú disponible:</p>
+         
+        <div class="grid-productos">
+            <div class="tarjeta-producto" onclick="mostrarCategoria('cat-pasteles')">
+                <img src="logo.png" alt="Diseño de pasteles" class="pros-img">
+                <h3>Diseño de Pasteles</h3>
+                <p>Modelados únicos en fondant, buttercream y diseños tridimensionales para bodas, XV años y cumpleaños.</p>
+            </div>
+
+            <div class="tarjeta-producto" onclick="mostrarCategoria('cat-galletas')">
+                <img src="logo.png" alt="Galletas decoradas artísticamente a mano" class="prod-img">
+                <h3>Galletas Decoradas</h3>
+                <p>Galletas de mantequilla pintadas individualmente a mano con acuarela y colorantes vegetales premium.</p>
+            </div>
+
+            <div class="tarjeta-producto" onclick="mostrarCategoria('cat-gourmet')">
+                 <img src="logo.png" alt="Gourmet Box" class="pros-img">
+                <h3>Gourmet Box</h3>
+                <p>Sets de galletas rellenas (Nutella, Lotus, Red Velvet) ideales para regalos de lujo y fechas especiales.</p>
+            </div>
+        </div>
+
+        <div id="cat-pasteles" class="categoria-contenido">
+            <h3>🎂 Nuestro Catálogo de Pasteles</h3>
+            <p>Aquí puedes agregar la lista o fotos de tus pasteles (Boda, Cumpleaños, Infantiles, etc.)</p>
+            <ul>
+                <li>Pastel de Bodas Fondant Premium</li>
+                <li>Pastel de Cumpleaños personalizado en Buttercream</li>
+                <li>Diseños 3D Tecnológicos</li>
+            </ul>
+        </div>
+
+        <div id="cat-galletas" class="categoria-contenido">
+            <h3>🍪 Galletas Decoradas a Mano</h3>
+            <p>Descubre los diseños que pintamos individualmente con acuarela comestible:</p>
+            <ul>
+                <li>Galletas Temáticas para Eventos (Set de 12 pzas)</li>
+                <li>Galletas de Mantequilla con detalles de Oro Comestible</li>
+            </ul>
+        </div>
+
+        <div id="cat-gourmet" class="categoria-contenido">
+            <h3>🎁 Gourmet Boxes Disponibles</h3>
+            <p>Cajas de lujo perfectas para regalar en ocasiones especiales:</p>
+            <ul>
+                <li>Box Premium (Rellenas de Nutella y Lotus Biscoff)</li>
+                <li>Box Red Velvet e Inyecciones de Chocolate</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Contacto MMC</h4>
+                <p>📍 Calle Londres, Col. Cañada, Reynosa, Tamaulipas</p>
+                <p>📱 WhatsApp: +52 899 878 2195</p>
+                <p>📸 Instagram: @Matiz_Miel_Y_Canela</p>
+            </div>
+            <div class="footer-horario">
+                <h4>Horarios de Atención</h4>
+                <p>Lun - Sáb: 9:00 AM - 8:00 PM</p>
+                <p>Dom: 10:00 AM - 4:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Matiz Miel y Canela. Proyecto de Innovación.</p>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarCategoria(idCategoria) {
+            // 1. Escondemos todas las categorías abiertas primero
+            const categorias = document.querySelectorAll('.categoria-contenido');
+            categorias.forEach(cat => {
+                cat.classList.remove('activo');
+            });
+
+            // 2. Mostramos únicamente la categoría en la que el usuario hizo clic
+            const categoriaSeleccionada = document.getElementById(idCategoria);
+            categoriaSeleccionada.classList.add('activo');
+
+            // 3. Desplazamos la pantalla suavemente hacia la información desplegada
+            categoriaSeleccionada.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
